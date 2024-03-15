@@ -227,6 +227,22 @@ DATASETS_CONFIG = {
         "min_depth": 1e-3,
         "max_depth": 80,
     },
+    "driving_stereo": {
+        "dataset": "driving_stereo",
+        "min_depth": 0.001, 
+        "max_depth": 80,  
+        "data_path": os.path.join(HOME_DIR, "DrivingStereo/sunny"),  # adjust as necessary
+        "gt_path": os.path.join(HOME_DIR, "DrivingStereo/sunny/depth-map-full-size"),  # adjust as necessary
+        #"filenames_file": "./train_test_inputs/driving_stereo_train_files_with_gt.txt",  # adjust as necessary
+        "input_height": 800,  # adjust as necessary
+        "input_width": 1758,  # adjust as necessary
+        "data_path_eval": os.path.join(HOME_DIR, "DrivingStereo/sunny"),  # adjust as necessary
+        "gt_path_eval": os.path.join(HOME_DIR, "DrivingStereo/sunny/depth-map-full-size"),  # adjust as necessary
+        #"filenames_file_eval": "./train_test_inputs/driving_stereo_test_files_with_gt.txt",  # adjust as necessary
+        "min_depth_eval": 1e-3, 
+        "max_depth_eval": 80,  
+        # add any other necessary settings here
+    },
 }
 
 ALL_INDOOR = ["nyu", "ibims", "sunrgbd", "diode_indoor", "hypersim_test"]
